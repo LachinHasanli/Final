@@ -1,0 +1,376 @@
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: #fff;
+}
+
+
+.main {
+  width: 75%;
+  background: url("./assets/background.jpg") center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.bottom {
+  height: 50%;
+}
+
+.options {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 80px;
+}
+
+.choice {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  color: #eee;
+  border: 5px solid cyan;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.no-cursor {
+  pointer-events: none;
+  cursor: default;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  color: #eee;
+  border: 5px solid cyan;
+  background: rgba(0, 0, 0, 0.2);
+  filter: blur(2px);
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  background: #020230;
+  color: #fff;
+}
+
+.fifa {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  text-align: center;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.22rem;
+  font-weight: 500;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  background-color: #020230;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  text-align: center;
+  border: 2px solid cyan;
+  border-radius: 15px;
+  font-weight: 500;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background-color: teal;
+  color: black;
+  border: 2px solid black;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+
+  0%,
+  22%,
+  42% {
+    background-color: teal;
+    color: black;
+  }
+
+  20%,
+  40%,
+  60% {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
+  62%,
+  100% {
+    background-color: #008000;
+    color: #fff;
+    border: 2px solid black;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+
+  0%,
+  22%,
+  42% {
+    background-color: teal;
+    color: black;
+  }
+
+  20%,
+  40%,
+  60% {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
+  62%,
+  100% {
+    background-color: crimson;
+    color: #fff;
+    border: 2px solid black;
+  }
+}
+
+
+.pyramid {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moneylist {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.passed {
+  color: #008000;
+}
+
+.moneyListItem.active {
+  background-color: peru;
+}
+
+.moneyListItemNumber {
+  font-size: 18px;
+  font-weight: 100;
+  width: 20%;
+}
+
+.moneyListItemAmount {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.score {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.score button {
+  border: 2px solid cyan;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background-color: #020230;
+  color: #fff;
+  cursor: pointer;
+}
+
+.startPage {
+  height: 100vh;
+  display: flex;
+  background-image: url("../src/assets/1288503.jpg");
+  background-size: cover;
+  color: #fff;
+
+}
+
+.center {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto 0 auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center input {
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  outline: 1px solid cyan;
+  font-weight: bold;
+  color: #fff;
+}
+
+input:focus {
+
+  outline: none;
+}
+
+.center .btn {
+  padding: 0.7rem 0.6rem;
+  font-size: 18px;
+  border-radius: 15px;
+  width: 250px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #eee;
+}
+
+.btn:hover {
+  background-position: right center;
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right,
+      #f6d365 0%,
+      #fda085 11%,
+      #f6d365 40%);
+}
+
+.center summary {
+  color: rgba(234, 240, 246, 0.9);
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.center summary span {
+  color: #ff9b7f;
+}
+
+
+@media screen and (max-width: 769px) {
+  .app {
+    display: block;
+    height: auto;
+  }
+
+  .main {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .pyramid {
+    width: 100%;
+  }
+
+  .moneyListItem {
+    justify-content: center;
+  }
+
+  .center summary {
+    width: 100%;
+    padding: 20px 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .top {
+    height: 30%;
+    margin-bottom: 15px;
+  }
+
+  .answer {
+    width: 35%;
+  }
+
+  .center {
+    margin-top: 120px;
+  }
+
+  .center input {
+    margin-bottom: 20px;
+  }
+
+  .center .btn {
+    margin-bottom: 20px;
+  }
+
+  .options {
+    position: inherit;
+  }
+
+  .startPage {
+    background-image: url("../src/assets/mobile_back.jpg");
+  }
+}
